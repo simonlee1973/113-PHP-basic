@@ -162,7 +162,7 @@
         }
         echo "<br>";
     }     
-
+    echo "新增GIT合併遠端再做merge<br>";  
 ?>
 </body>
 </html>
