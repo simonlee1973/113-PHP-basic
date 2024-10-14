@@ -34,7 +34,7 @@
     
 }    
 .nine td{
-    border: 1px solid #aaa;
+    border: 1px solid #aaa;  //藍色
     width: 30px;
     height: 30px;
     text-align:center;
@@ -69,9 +69,48 @@
             }
             else if($i==0)
             {
+                
                 $c=$j;
 
             }
+            if($c<10)
+                echo $c.'&nbsp &nbsp &nbsp';  //&nbsp 可以拿掉,在CSS table 已設對齊
+            else
+                echo $c.'&nbsp &nbsp';                      
+            echo "</td>";
+        }
+        echo "</tr>";
+    }
+    echo '</table>'      
+?> 
+
+<?php
+    echo "<table class='nine'> 半邊99乘法表 ";
+    for($i=0;$i<=9;$i++)
+    {
+        echo "<tr>";
+        for($j=0;$j<=9;$j++)
+        {
+            
+            echo "<td>";
+            if(($j==0 && $i==0))
+            {
+                $c="";
+            }
+            else if($j==0)
+            {
+                $c=$i;                
+            }
+            else if($i==0)
+            {
+                
+                $c=$j;
+
+            }
+            else if($i>=$j)
+                $c=$i*$j;
+            else
+                $c="";
             if($c<10)
                 echo $c.'&nbsp &nbsp &nbsp';  //&nbsp 可以拿掉,在CSS table 已設對齊
             else
