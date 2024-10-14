@@ -132,6 +132,32 @@
         } 
 
     }
+    echo "菱形對角線<br>";
+    if($n&0x01==1)
+    {
+        $k=2*$n;
+        for($i=1;$i<$k;$i++)
+        {
+            if($i<$n) {
+                $start=$n-($i-1);
+                $end=$n+($i-1);
+            }
+            else {
+                $start=$i-$n+1;
+                $end=($k)-$start;            
+            }
+            for($j=1;$j<$n*2;$j++) {
+                if(($j==$start) || ($j==$end) ||($j==$n)|| ($i==$n))
+                    echo '*';
+                else                    
+                    echo "&nbsp";
+            }
+            echo "<br>";
+            }    
+        }
+    
+
+
 
 
     echo "矩形<br>";           
@@ -148,7 +174,7 @@
         echo "<br>";
     }        
 
-    echo "矩形II<br>";           
+    echo "矩形II 含對角線<br>";           
     for($i=0;$i<$n;$i++)
     {
         for($j=0;$j<$n;$j++)
@@ -162,7 +188,23 @@
         }
         echo "<br>";
     }     
-    echo "新增GIT合併遠端再做merge<br>";  
+
+    echo "矩形II 含對角線n+1<br>"; 
+    $n++;          
+    for($i=0;$i<$n;$i++)
+    {
+        for($j=0;$j<$n;$j++)
+        {
+            if($i==0||$j==0 ||$j==$n-1 ||$i==$n-1 ||$i==$n-$j-1 || $i==$j)
+                echo '*';
+            
+            else 
+                echo "&nbsp";
+           
+        }
+        echo "<br>";
+    }     
+    echo "新增GIT合併遠端再做merge<br>";  //GIT study    
 ?>
 </body>
 </html>
