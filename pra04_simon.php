@@ -34,7 +34,9 @@ $class = [$judy, $amo, $john, $peter, $hebe];
 
 // 開始生成 HTML 表格
 echo "<table>";
-echo "<pre>" . print_r($class, true) . "</pre>";
+echo "<pre>"; 
+echo print_r($class, true) ;
+echo "</pre>";
 // 打印表頭
 echo "<tr>";
 foreach ($header as $value) {
