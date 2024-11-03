@@ -12,22 +12,14 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Create Table Style": {
-		"prefix": "tablestyle",  // 觸發片段的前綴
+	"Create questionMark Function": {
+		"prefix": "?",  // 觸發片段的前綴
 		"body": [
-			"<style>",
-			"table{",
-			"	border-collapse:collapse;",
-			"",
-			"}",
-			"td{",
-			"	padding:6px 10px;",
-			"	text-align: center;",
-			"	border:1px solid #ccc;",
-			"}",
-			"</style>",
-			""
+			"<?php",
+			"${1:} //to do",
+			"?>"
 		],
-		"description": "創建一個 tablestyle"
+		"description": "創建一個 PHP 函數"
 	}	
+	
 }

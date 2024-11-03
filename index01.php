@@ -9,7 +9,7 @@ git <!DOCTYPE html>
 <?php
     define ("PI",3.1415);
     $price=100;
-    echo $price;
+        echo $price;
     echo "<br>";
 
     $name_first="Lee";

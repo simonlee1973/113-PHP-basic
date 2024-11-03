@@ -13,7 +13,17 @@
 	// 	"description": "Log output to console"
 	// }
 	
-	
+	"Create questionMark Function": {
+		"prefix": "?",  // 觸發片段的前綴
+		"body": [
+			"<?php",
+			"${1:} //to do",
+			"?>"
+		],
+		"description": "創建一個 PHP 函數"
+	}
+
+
 		"Create foreach Function": {
 			"prefix": "foreachc",  // 觸發片段的前綴
 			"body": [
